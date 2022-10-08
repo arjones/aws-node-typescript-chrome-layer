@@ -1,80 +1,32 @@
-
-
-npm i @sparticuz/chrome-aws-lambda@17.1.3 puppeteer-core@17.1.3 --save
-serverless plugin install -n serverless-esbuild
-
-
-
-
 <!--
-title: 'AWS NodeJS Example'
-description: 'This template demonstrates how to deploy a NodeJS function running on AWS Lambda using the traditional Serverless Framework.'
+title: 'AWS Node Typescript Chrome Example'
+description: 'This example uses Node + Typescript + Chromium (Layer) on AWS Lambda for Web Scrapting'
 layout: Doc
 framework: v3
 platform: AWS
 language: nodeJS
 priority: 1
-authorLink: 'https://github.com/serverless'
-authorName: 'Serverless, inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
+authorLink: 'https://github.com/arjones'
+authorName: 'Gustavo Arjones'
+authorAvatar: 'https://avatars.githubusercontent.com/u/194210?v=4'
 -->
 
+# AWS Node Typescript Chrome Example
+This example uses Node + Typescript + Chromium (Layer) on AWS Lambda for Web Scrapting. It includes offline setup so you can run locally.
 
-# Serverless Framework AWS NodeJS Example
+## Install
 
-This template demonstrates how to deploy a NodeJS function running on AWS Lambda using the traditional Serverless Framework. The deployed function does not include any event definitions as well as any kind of persistence (database). For more advanced configurations check out the [examples repo](https://github.com/serverless/examples/) which includes integrations with SQS, DynamoDB or examples of functions that are triggered in `cron`-like manner. For details about configuration of specific `events`, please refer to our [documentation](https://www.serverless.com/framework/docs/providers/aws/events/).
+```sh
+npm install
 
-## Usage
+serverless deploy --verbose
 
-### Deployment
-
-In order to deploy the example, you need to run the following command:
-
-```
-$ serverless deploy
-```
-
-After running deploy, you should see output similar to:
-
-```bash
-Deploying aws-node-project to stage dev (us-east-1)
-
-✔ Service deployed to stack aws-node-project-dev (112s)
-
-functions:
-  hello: aws-node-project-dev-hello (1.5 kB)
+# Invoke Remote
+serverless invoke -f hello
 ```
 
-### Invocation
+## Local Development
 
-After successful deployment, you can invoke the deployed function by using the following command:
-
-```bash
-serverless invoke --function hello
-```
-
-Which should result in response similar to the following:
-
-```json
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": {}\n}"
-}
-```
-
-### Local development
-
-You can invoke your function locally by using the following command:
-
-```bash
-serverless invoke local --function hello
-```
-
-Which should result in response similar to the following:
-
-```
-{
-    "statusCode": 200,
-    "body": "{\n  \"message\": \"Go Serverless v3.0! Your function executed successfully!\",\n  \"input\": \"\"\n}"
-}
+```sh
+serverless invoke local -f hello
 ```
