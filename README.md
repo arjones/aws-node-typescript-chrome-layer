@@ -19,6 +19,9 @@ This example uses Node + Typescript + Chromium (Layer) on AWS Lambda for Web Scr
 ```sh
 npm install
 
+# Install first time, to create deployment
+serverless 
+
 serverless deploy --verbose
 
 # Invoke Remote

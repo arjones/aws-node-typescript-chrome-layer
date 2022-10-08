@@ -1,5 +1,5 @@
 {
-  "name": "aws-nodejs-chrome-layer",
+  "name": "aws-node-typescript-chrome-layer",
   "version": "1.0.0",
   "description": "An example using node, typescript, chrome/puppeteer layer",
   "main": "handler.js",

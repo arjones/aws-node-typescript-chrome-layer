@@ -1,6 +1,6 @@
 org: arjones
-app: aws-nodejs-chrome-layer
-service: aws-nodejs-chrome-layer
+app: aws-node-typescript-chrome-layer
+service: aws-node-typescript-chrome-layer
 
 frameworkVersion: '3'
 
